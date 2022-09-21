@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(https://as2.ftcdn.net/v2/jpg/00/69/42/49/1000_F_69424905_vxTpRGAcVKni9157VpKAOG6MpTX30etl.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#todos {
+    background-color: rgba(106, 106, 106, 0.725);
+    box-shadow: 2px 2px 10px 10px rgb(26, 1, 1);
+    height: 85%;
+    border-radius: 15px;
+    width: 70%;
+    max-width: 40rem;
+    padding-top: 1rem;
+    overflow-y: auto;
+}
+
+h1 {
+    color: rgb(8, 7, 64);
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+}
+
+#input {
+    width: 70%;
+    padding: .3rem;
+    outline: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border: 2px solid rgb(53, 52, 52);
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgb(0, 37, 30);
+}
+
+#add-btn {
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: rgb(124, 140, 178);
+    box-shadow: 2px 2px 10px rgb(0, 37, 30);
+    color: rgb(15, 11, 51);
+    font-weight: 500;
+}
+
+
+ul {
+    padding-right: .5rem;
+    padding-left: 1.5rem !important;
+    list-style: none;
+    text-align: left;
+
+}
+
+ul li {
+    align-items: center;
+    background-color: rgba(161, 135, 135, 0.549);
+    padding: .4rem 0;
+    margin-bottom: 5px;
+    width: 95%;
+    border-radius: 5px;
+}
+
+li p {
+    width: 85%;
+    margin-left: 1rem;
+    margin-bottom: 0;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.fa-check {
+    margin-left: 10px;
+    border: 2px solid rgb(97, 71, 71);
+    background-color: rgb(128, 142, 191);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.fa-trash {
+    padding-right: 10px;
+    cursor: pointer;
+    color: rgb(106, 7, 27);
+}
+
+.checked p {
+    text-decoration: line-through;
+    font-weight: 400;
+}
+
+.checked .fa-check {
+
+    color: rgb(204, 204, 204);
+    background-color: rgb(74, 141, 74);
+}
