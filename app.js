@@ -1,6 +1,8 @@
 const input = document.querySelector("#input");
-const addBtn = document.querySelector("#add-btn");
+const addBtn = document.getElementById("add-btn");
+const delBtn = document.getElementById("del-btn");
 const ul = document.querySelector("#lists");
+const trash = document.querySelector(".fa-trash");
 
 let todos = JSON.parse(localStorage.getItem("TODOS")) || [];
 console.log(todos);
@@ -10,8 +12,9 @@ todos.forEach((t) => addLi(t));
 addBtn.addEventListener("click", clickAdd);
 
 function clickAdd() {
+  console.log("add");
   if (!input.value.trim()) {
-    alert("Error");
+    alert("Enter a todo!");
   } else {
     const todo = {
       id: new Date().getTime(),
@@ -55,6 +58,12 @@ ul.addEventListener("click", (e) => {
     todos = todos.filter((i) => i.id !== Number(liId));
     localStorage.setItem("TODOS", JSON.stringify(todos));
   }
+});
+
+delBtn.addEventListener("click", () => {
+  ul.innerText = "";
+  todos = [];
+  localStorage.setItem("TODOS", JSON.stringify(todos));
 });
 
 window.onload = function () {
